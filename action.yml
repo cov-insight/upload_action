@@ -1,0 +1,24 @@
+name: 'cov-insight'
+description: 'cov-insight upload action'
+inputs:
+  repoId:
+    description: 'repo id'
+    required: false
+    default: ${{ github.repository }}
+  revHash:
+    description: 'rev hash'
+    required: false
+    default: ${{ github.sha }}'
+  sceneType:
+    description: 'scene type'
+    required: false
+    default: 0
+  sceneId:
+    description: 'scene id'
+    required: false
+    default: 0
+runs:
+  using: "composite"
+  steps:
+    - run: ./upload.sh
+      shell: bash
