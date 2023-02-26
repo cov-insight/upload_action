@@ -17,6 +17,18 @@ inputs:
     description: 'scene id'
     required: false
     default: 0
+  dataType:
+    description: 'data type'
+    required: false
+    default: "JACOCO"
+  dataFile:
+    description: 'data file'
+    required: false
+    default: "./target/jacoco.xml"
+  backendUrl:
+    description: 'backend url'
+    required: false
+    default: "http://127.0.0.1:9898"
 runs:
   using: "composite"
   steps:
